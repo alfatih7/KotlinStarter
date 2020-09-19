@@ -4,22 +4,24 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import com.alfatih.kotlinstarter.R
+import com.alfatih.kotlinstarter.databinding.ActivityInteractiveBinding
 
 class InteractiveActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityInteractiveBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_interactive)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_interactive)
 
     }
 
     fun setNickName(view: View) {
-        val nickname_edit: EditText = findViewById(R.id.nickname_edit)
-        val nickname_text: TextView = findViewById(R.id.nickname_text)
+        val nickname_edit = binding.nicknameEdit
+        val nickname_text = binding.nicknameText
         val nickname = nickname_edit.text
         if (nickname.isNotEmpty()) {
             nickname_text.text = nickname
@@ -27,7 +29,7 @@ class InteractiveActivity : AppCompatActivity() {
             var message = "Hello " + nickname
             showMessage(message)
         } else {
-            showMessage("You do not any name!")
+            showMessage("You didn't enter a name!")
         }
         // Hide the keyboard.
         val inputMethodManager =

@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.alfatih.kotlinstarter.unitone.ConstrainActivity
 import com.alfatih.kotlinstarter.unitone.InteractiveActivity
 import com.alfatih.kotlinstarter.unitone.RollDiceActivity
 import com.alfatih.kotlinstarter.unitone.basic.BasicActivity
@@ -17,6 +18,10 @@ class MainActivity : AppCompatActivity() {
 
         val rollButton: Button = findViewById(R.id.roll_dice_btn);
         rollButton.setOnClickListener { openRoll() }
+
+        findViewById<Button>(R.id.button_constrain).setOnClickListener {
+            startActivity(Intent(this, ConstrainActivity::class.java))
+        }
 
     }
 

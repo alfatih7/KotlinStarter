@@ -13,4 +13,17 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="enter_your_nickname">Enter your nickname</string>
+    <string name="roll_dice_app">Roll Dice App</string>
+    <string name="basic_activity">basic Activity</string>
+    <string name="interactive">interactive</string>
+    <string name="constrain_layout_app">constrain layout app</string>
+    <string name="box_one">box one</string>
+    <string name="box_two">box two</string>
+    <string name="box_three">box three</string>
+    <string name="box_five">box five</string>
+    <string name="box_four">box four</string>
+    <string name="how_to_play">how to play</string>
+    <string name="button_red">RED</string>
+    <string name="button_yellow">YELLOW</string>
+    <string name="button_green">GREEN</string>
 </resources>

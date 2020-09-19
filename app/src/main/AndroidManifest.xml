@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".unitone.InteractiveActivity"></activity>
+        <activity android:name=".unitone.ConstrainActivity"></activity>
+        <activity android:name=".unitone.InteractiveActivity" />
         <activity
             android:name=".unitone.basic.BasicActivity"
             android:label="@string/title_activity_basic"
