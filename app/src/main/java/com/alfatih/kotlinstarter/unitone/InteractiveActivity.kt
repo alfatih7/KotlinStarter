@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.alfatih.kotlinstarter.R
 import com.alfatih.kotlinstarter.databinding.ActivityInteractiveBinding
+import com.alfatih.kotlinstarter.unitone.basic.MyDataNam
 
 class InteractiveActivity : AppCompatActivity() {
     private lateinit var binding: ActivityInteractiveBinding
@@ -17,15 +18,23 @@ class InteractiveActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_interactive)
 
+
     }
 
     fun setNickName(view: View) {
+        val myName: MyDataNam = MyDataNam()
+        binding.myName = myName
+
         val nickname_edit = binding.nicknameEdit
         val nickname_text = binding.nicknameText
         val nickname = nickname_edit.text
         if (nickname.isNotEmpty()) {
-            nickname_text.text = nickname
-            nickname_text.visibility = View.VISIBLE
+            binding.apply {
+                myName?.nickName = nickname_edit.text.toString()
+                invalidateAll()
+                nickname_text.visibility = View.VISIBLE
+
+            }
             var message = "Hello " + nickname
             showMessage(message)
         } else {

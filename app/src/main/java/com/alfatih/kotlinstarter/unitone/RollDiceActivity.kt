@@ -2,24 +2,25 @@ package com.alfatih.kotlinstarter.unitone
 
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import com.alfatih.kotlinstarter.R
+import com.alfatih.kotlinstarter.databinding.ActivityRollDiceBinding
 
 class RollDiceActivity : AppCompatActivity() {
-    lateinit var diceImage1: ImageView
-    lateinit var diceImage2: ImageView
+    private lateinit var bindingRool: ActivityRollDiceBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_roll_dice)
-        diceImage1 = findViewById(R.id.imgView_dice)
-        diceImage2 = findViewById(R.id.imgView_dice2)
+        bindingRool = DataBindingUtil.setContentView(
+            this, R.layout.activity_roll_dice
+        )
+
     }
 
     fun onRoll(view: View) {
-
-        diceImage1.setImageResource(getRandomDiceImage())
-        diceImage2.setImageResource(getRandomDiceImage())
+        bindingRool.imgViewDice.setImageResource(getRandomDiceImage())
+        bindingRool.imgViewDice2.setImageResource(getRandomDiceImage())
 
     }
 

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".unitone.dessertclicker.DessertMainFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/dessert_image"
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:contentDescription="@string/ice"
+                android:src="@drawable/honeycomb"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/back_dessertImage_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="#A1FFA000"
+                android:text="Back"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toStartOf="@+id/next_dessetImage_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dessert_image" />
+
+            <Button
+                android:id="@+id/next_dessetImage_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#9FFFA000"
+                android:text="next"
+                app:layout_constraintBaseline_toBaselineOf="@+id/back_dessertImage_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/back_dessertImage_btn" />
+
+            <Button
+                android:id="@+id/buy_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="#90C2185B"
+                android:text="Buy"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="@+id/next_dessetImage_btn"
+                app:layout_constraintStart_toStartOf="@+id/back_dessertImage_btn"
+                app:layout_constraintTop_toBottomOf="@+id/back_dessertImage_btn" />
+
+            <TextView
+                android:id="@+id/text_count"
+                android:layout_width="204dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="0"
+                android:textSize="24sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewcount"
+                app:layout_constraintEnd_toEndOf="@+id/buy_btn"
+                app:layout_constraintStart_toEndOf="@+id/textViewcount" />
+
+            <TextView
+                android:id="@+id/textView_totalPrice"
+                android:layout_width="204dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:hint="0.00 $"
+                android:textSize="24sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/textViewcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Count"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/buy_btn"
+                app:layout_constraintTop_toBottomOf="@+id/buy_btn" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="Total price"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/text_count"
+                app:layout_constraintStart_toStartOf="@+id/textViewcount"
+                app:layout_constraintTop_toBottomOf="@+id/textViewcount" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

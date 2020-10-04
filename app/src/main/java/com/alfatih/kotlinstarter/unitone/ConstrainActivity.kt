@@ -16,6 +16,7 @@ class ConstrainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_constrain)
 
+        // set margin for view
         val layoutparm = binding.boxThreeText.layoutParams as ConstraintLayout.LayoutParams
         layoutparm.setMargins(8, 0, 8, 8)
 
